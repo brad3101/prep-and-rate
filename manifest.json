@@ -1,0 +1,19 @@
+{
+  "name": "Prep & Rate",
+  "short_name": "Prep & Rate",
+  "description": "Your personal meal prep journal",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#faf8f5",
+  "theme_color": "#c4622d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./icons/icon-512.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "lifestyle", "productivity"]
+}
