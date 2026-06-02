@@ -674,12 +674,14 @@ function App() {
       {/* Header */}
       <header className="sticky top-0 z-30 bg-cream/95 backdrop-blur border-b border-cream-dark"
         style={{ paddingTop: 'env(safe-area-inset-top)' }}>
-        <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between gap-3">
           <button onClick={() => setShowSettings(true)}
             className="w-10 h-10 rounded-full bg-warmgray-pale text-ink-soft hover:bg-cream-dark active:scale-95 transition-all flex items-center justify-center shrink-0">
             ⚙
           </button>
-          <img src="./icons/logo-lockup.png" alt="Prep & Rate" className="h-28 w-auto" style={{maxWidth: '480px'}} />
+          <div className="flex-1 flex justify-center">
+            <img src="./icons/logo-lockup.png" alt="Prep & Rate" style={{height: '64px', width: 'auto', maxWidth: '100%'}} />
+          </div>
           <button onClick={() => setFormMode('add')}
             className="px-4 py-2 rounded-xl bg-terracotta text-white font-semibold text-sm hover:bg-terracotta-light active:scale-95 transition-all shadow-sm shrink-0">
             + Add
