@@ -1,10 +1,10 @@
-const CACHE = 'prep-and-rate-v1';
+const CACHE = 'prep-and-rate-v2';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
-  './icons/icon-512.svg',
-  './icons/logo-lockup.svg',
+  './icons/icon-512.png',
+  './icons/logo-lockup.png',
   'https://unpkg.com/react@18/umd/react.development.js',
   'https://unpkg.com/react-dom@18/umd/react-dom.development.js',
   'https://unpkg.com/@babel/standalone/babel.min.js',
@@ -16,7 +16,7 @@ self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE).then(cache => {
       // Cache local assets reliably; best-effort on CDN assets
-      return cache.addAll(['./index.html', './manifest.json', './icons/icon-512.svg', './icons/logo-lockup.svg']).then(() => {
+      return cache.addAll(['./index.html', './manifest.json', './icons/icon-512.png', './icons/logo-lockup.png']).then(() => {
         return Promise.allSettled(ASSETS.filter(a => !a.startsWith('.')).map(url =>
           fetch(url, { mode: 'no-cors' }).then(r => cache.put(url, r)).catch(() => {})
         ));
